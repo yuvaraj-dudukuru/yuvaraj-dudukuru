@@ -1,0 +1,5 @@
+# Only needed locally, to regenerate the ASCII portrait from your photo.
+Pillow>=10.0
+numpy>=1.26
+# Optional: background removal for busy photo backgrounds (large ML download).
+# rembg>=2.0

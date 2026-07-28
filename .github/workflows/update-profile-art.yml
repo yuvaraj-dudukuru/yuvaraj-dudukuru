@@ -1,0 +1,55 @@
+name: Update profile art
+
+on:
+  schedule:
+    # 01:30 UTC daily = 07:00 IST
+    - cron: "30 1 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - ".github/workflows/update-profile-art.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-art
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch contributions
+        env:
+          GH_PROFILE_USER: ${{ github.repository_owner }}
+        run: python scripts/fetch_contributions.py
+
+      - name: Render heatmap
+        run: python scripts/make_heatmap.py
+
+      - name: Render info card
+        run: python scripts/make_info_card.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain contrib-heatmap.svg info-card.svg data/contributions.json)" ]; then
+            git add contrib-heatmap.svg info-card.svg data/contributions.json
+            git commit -m "chore: refresh profile art [skip ci]"
+            git push
+          else
+            echo "Nothing changed."
+          fi
