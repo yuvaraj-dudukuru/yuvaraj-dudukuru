@@ -2,41 +2,6 @@
   "user": "yuvaraj-dudukuru",
   "days": [
     {
-      "date": "2025-09-14",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-09-15",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-09-16",
-      "level": 1,
-      "count": 1
-    },
-    {
-      "date": "2025-09-17",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-09-18",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-09-19",
-      "level": 0,
-      "count": 0
-    },
-    {
-      "date": "2025-09-20",
-      "level": 1,
-      "count": 1
-    },
-    {
       "date": "2025-09-21",
       "level": 1,
       "count": 7
@@ -1855,11 +1820,16 @@
       "date": "2026-09-19",
       "level": 0,
       "count": 0
+    },
+    {
+      "date": "2026-09-20",
+      "level": 1,
+      "count": 1
     }
   ],
-  "total": 646,
+  "total": 645,
   "longest_streak": 19,
-  "current_streak": 0,
-  "start": "2025-09-14",
-  "end": "2026-09-19"
+  "current_streak": 1,
+  "start": "2025-09-21",
+  "end": "2026-09-20"
 }
