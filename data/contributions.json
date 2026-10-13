@@ -1809,12 +1809,12 @@
     {
       "date": "2026-10-08",
       "level": 4,
-      "count": 26
+      "count": 28
     },
     {
       "date": "2026-10-09",
       "level": 1,
-      "count": 1
+      "count": 5
     },
     {
       "date": "2026-10-10",
@@ -1829,12 +1829,17 @@
     {
       "date": "2026-10-12",
       "level": 1,
+      "count": 4
+    },
+    {
+      "date": "2026-10-13",
+      "level": 1,
       "count": 1
     }
   ],
-  "total": 862,
+  "total": 872,
   "longest_streak": 19,
-  "current_streak": 1,
+  "current_streak": 2,
   "start": "2025-10-12",
-  "end": "2026-10-12"
+  "end": "2026-10-13"
 }
