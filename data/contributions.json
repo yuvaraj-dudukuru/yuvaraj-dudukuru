@@ -1825,11 +1825,16 @@
       "date": "2026-10-25",
       "level": 1,
       "count": 2
+    },
+    {
+      "date": "2026-10-26",
+      "level": 1,
+      "count": 6
     }
   ],
-  "total": 938,
+  "total": 944,
   "longest_streak": 19,
-  "current_streak": 1,
+  "current_streak": 2,
   "start": "2025-10-26",
-  "end": "2026-10-25"
+  "end": "2026-10-26"
 }
