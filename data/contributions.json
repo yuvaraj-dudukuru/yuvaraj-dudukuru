@@ -1828,13 +1828,18 @@
     },
     {
       "date": "2026-11-09",
+      "level": 1,
+      "count": 5
+    },
+    {
+      "date": "2026-11-10",
       "level": 0,
       "count": 0
     }
   ],
-  "total": 972,
+  "total": 977,
   "longest_streak": 19,
   "current_streak": 0,
   "start": "2025-11-09",
-  "end": "2026-11-09"
+  "end": "2026-11-10"
 }
